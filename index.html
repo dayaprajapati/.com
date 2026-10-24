@@ -73,7 +73,10 @@
     nav a:hover {
       color: var(--accent2);
     }
-
+    .outer{
+      display: flex;
+      display: inline;
+    }
     /* HERO */
     .hero {
       min-height: 100vh;
@@ -374,7 +377,7 @@
   <!-- HERO -->
   <header class="hero" id="home">
     <div class="hero-content">
-
+    <div class="outer">
       <!-- Replace profile.jpg with your photo -->
       <img src="profile.jpg" alt="Profile Photo" class="profile">
 
@@ -392,7 +395,7 @@
         I create modern websites and digital experiences
         that look beautiful and work smoothly.
       </p>
-
+    </div>
       <div class="buttons">
         <a href="#projects" class="btn primary">View My Work</a>
         <a href="#contact" class="btn secondary">Contact Me</a>
