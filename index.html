@@ -290,6 +290,83 @@
       padding: 50px 30px;
       border-radius: 25px;
     }
+    .contact-box {
+      max-width: 750px;
+      margin: 30px auto;
+      text-align: center;
+      background: #11131a;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 40px 30px;
+      border-radius: 25px;
+    }
+
+    .contact-box p {
+      color: #a5a8b3;
+      margin: 15px auto 25px;
+    }
+
+    #contact-form {
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    #contact-form input,
+    #contact-form textarea {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 8px;
+      background: #08090d;
+      color: #ffffff;
+      font: inherit;
+    }
+
+    #contact-form textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    #contact-form input:focus,
+    #contact-form textarea:focus {
+      outline: 2px solid #00d9ff;
+      border-color: transparent;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 25px;
+      border: 0;
+      border-radius: 30px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      background: linear-gradient(90deg, #7c5cff, #00d9ff);
+    }
+
+    .socials {
+      margin-top: 25px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .socials a {
+      width: 45px;
+      height: 45px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      color: white;
+      text-decoration: none;
+    }
+
+    #form-status {
+      min-height: 24px;
+      overflow-wrap: anywhere;
+    }
 
     .contact-box p {
       color: var(--muted);
@@ -542,30 +619,51 @@
       <h2>Let's <span class="gradient">Connect</span></h2>
       <p>Have a project in mind?</p>
     </div>
-
     <div class="contact-box">
+    <h2>Let's work together 🚀</h2>
+    <p>Send me a message using the form below.</p>
 
-      <h2>Let's work together 🚀</h2>
+    <form id="contact-form">
+      <input
+        type="text"
+        name="name"
+        placeholder="Your name"
+        maxlength="100"
+        required
+      >
 
-      <p>
-        I'm always interested in new projects,
-        creative ideas and opportunities.
-      </p>
+      <input
+        type="email"
+        name="email"
+        placeholder="Your email"
+        maxlength="254"
+        required
+      >
 
-      <a
-        href="mailto:your@email.com"
-        class="btn primary">
-        Email Me
-      </a>
+      <textarea
+        name="message"
+        placeholder="Your message"
+        minlength="5"
+        maxlength="1000"
+        required
+      ></textarea>
 
-      <div class="socials">
-        <a href="#">IG</a>
-        <a href="#">GH</a>
-        <a href="#">LI</a>
-        <a href="#">YT</a>
-      </div>
+      <button type="submit" class="btn">Send Message</button>
+      <p id="form-status" role="status" aria-live="polite"></p>
+    </form>
 
+    <div class="socials">
+      <a href="#" aria-label="Instagram">IG</a>
+      <a href="#" aria-label="GitHub">GH</a>
+      <a href="#" aria-label="LinkedIn">LI</a>
+      <a href="#" aria-label="YouTube">YT</a>
     </div>
+  </div>
+
+  <!-- This is the standalone contact form only.
+       Supabase connection has not been added yet. -->
+
+    
   </section>
 
   <footer>
